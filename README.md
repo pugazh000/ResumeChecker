@@ -14,21 +14,36 @@ This project is an AI-powered **Resume Scanner** that extracts skills and experi
 ## **📂 Folder Structure**
 ```
 resume-scanner/
-│── backend/
-│   │── app.py                     # Flask backend for API
-│   │── requirements.txt           # Dependencies
-│   │── zappa_settings.json        # Zappa config for AWS deployment
-│   │── utils/
-│   │   ├── extract.py             # Extracts text from PDF
-│   │   ├── nlp.py                 # NLP model for skill extraction
-│   │   ├── match.py               # Job role matching logic
-│── lambda_layer/
-│   ├── python/
-│   │   ├── spacy/
+├── backend/               # Flask Backend (AWS Lambda)
+│   ├── app.py            # Main API
+│   ├── requirements.txt  # Dependencies
+│   ├── zappa_settings.json  # Zappa Deployment Config
+│   ├── utils/            # Helper Functions
+│   │   ├── extract.py    # PDF Text Extraction
+│   │   ├── nlp.py        # NLP Skill Extraction
+│   │   ├── match.py      # Job Role Matching
+│   ├── temp/             # Temporary folder for uploaded resumes
+│
+├── frontend/              # Web UI (AWS S3)
+│   ├── index.html        # Frontend UI
+│   ├── static/           # Static Files
+│   │   ├── css/          # CSS Files
+│   │   │   ├── style.css  # Main Stylesheet
+│   │   ├── js/           # JavaScript Files
+│   │   │   ├── script.js  # Handles API Calls
+│
+├── deployment/            # Deployment Config & Scripts
+│   ├── s3_upload.sh      # Script to upload frontend to S3
+│   ├── zappa_deploy.sh   # Script to deploy backend to AWS Lambda
+│
+├── lambda_layer/          # AWS Lambda Layer for dependencies
+│   ├── python/           # Python Packages
+│   │   ├── spacy/       # SpaCy NLP Model for AWS Lambda
 │   │   │   ├── data/
-│   │   │   │   ├── en_core_web_sm/  # SpaCy model for AWS Lambda
-│── frontend/ (Optional for UI)
-│── README.md
+│   │   │   │   ├── en_core_web_sm/
+│
+├── README.md              # Project Documentation
+├── .gitignore             # Ignore unnecessary files
 ```
 
 ---
