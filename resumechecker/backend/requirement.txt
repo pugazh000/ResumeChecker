@@ -1,0 +1,8 @@
+Flask
+boto3
+fitz
+pymupdf
+spacy
+nltk
+pandas
+zappa

@@ -1,0 +1,28 @@
+body {
+    background-color: #0d0d0d;
+    color: #00ffcc;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input, select, button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background: #00ffcc;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #009999;
+}
